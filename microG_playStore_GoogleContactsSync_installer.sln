@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31606.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "microG_playStore_GoogleContactsSync_installer", "microG_playStore_GoogleContactsSync_installer", "{4BA71F79-35C1-4DB9-93C6-A21C9CD0429B}"
+	ProjectSection(SolutionItems) = preProject
+		module.prop = module.prop
+		uninstall.sh = uninstall.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apk", "apk", "{7DCA2B65-6A35-445E-A53A-41C3AD82ED41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{05C27810-9028-4D78-B077-2682C5B05AA0}"
+	ProjectSection(SolutionItems) = preProject
+		common\post-fs-data.sh = common\post-fs-data.sh
+		common\sepolicy.sh = common\sepolicy.sh
+		common\service.sh = common\service.sh
+		common\system.prop = common\system.prop
+		common\unity_install.sh = common\unity_install.sh
+		common\unity_uninstall.sh = common\unity_uninstall.sh
+		common\unity_upgrade.sh = common\unity_upgrade.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unityfiles", "unityfiles", "{64C7D387-714D-40AA-989A-A5D901D9EA8C}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7DCA2B65-6A35-445E-A53A-41C3AD82ED41} = {4BA71F79-35C1-4DB9-93C6-A21C9CD0429B}
+		{05C27810-9028-4D78-B077-2682C5B05AA0} = {4BA71F79-35C1-4DB9-93C6-A21C9CD0429B}
+		{64C7D387-714D-40AA-989A-A5D901D9EA8C} = {05C27810-9028-4D78-B077-2682C5B05AA0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A682400-E9CD-4D0B-A6C8-FE883CD2409B}
+	EndGlobalSection
+EndGlobal

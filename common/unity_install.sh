@@ -1,10 +1,10 @@
-OIFS=$IFS; IFS=\|
+ï»¿OIFS=$IFS; IFS=\|
 
 case $(echo $(basename $ZIPFILE) | tr '[:upper:]' '[:lower:]') in
-	*JAIA1*) JAI=true; JAIA1=true; JAIA2=false; JAIA3=false;;
-	*JAIA2*) JAI=true; JAIA1=false; JAIA2=true; JAIA3=false;;
-	*JAIA3*) JAI=true; JAIA1=false; JAIA2=false; JAIA3=true;;
-	*nJAI*) JAI=false; JAIA1=false; JAIA2=false; JAIA3=false;;
+	*clearG1*) microG=true; clearG1=true; clearG2=false; clearG3=false;;
+	*clearG2*) microG=true; clearG1=false; clearG2=true; clearG3=false;;
+	*clearG3*) microG=true; clearG1=false; clearG2=false; clearG3=true;;
+	*nmicroG*) microG=false; clearG1=false; clearG2=false; clearG3=false;;
 esac
 case $(echo $(basename $ZIPFILE) | tr '[:upper:]' '[:lower:]') in
 	*nk*) NK=true;;
@@ -13,41 +13,33 @@ IFS=$OIFS
 
 
 		if
-		 [ -z $JAI ] || [ -z $JAIA1 ] || [ -z $JAIA2 ] || [ -z $JAIA3 ]; then
- #       	ui_print " Ultimate Statusbar Icon Pack by Jai..... "
-#			ui_print " "
-#			ui_print "   Select which statusbar bar Icon pack you want among 1, 2 and 3"
-#			ui_print " Wifi and signal icon u can change anytime from developer options "
-#			ui_print " For screenshots of icons check our telegram channel @cool_modules "
-#			ui_print "   Do you want to install statusbar icon pack ?"
-			ui_print "ÊÇ·ñĞèÒª°²×° microG ?"
-			print_modname() {
-			  ui_print "*******************************"
-			  ui_print "     	Magisk Module:         "
-			  ui_print "For HMNote4X    By ÉîÒ¹Ìı±í"
-			  ui_print "*******************************"
-			}
-			ui_print " "
-			ui_print " Press  Vol+ = Yes , Press Vol- = No, and exit "
+		 [ -z $microG ] || [ -z $clearG1 ] || [ -z $clearG2 ] || [ -z $clearG3 ]; then
+			echo "                _                          ______";
+			echo "   ____ ___    (_)  _____   _____  ____   / ____/";
+			echo "  / __ \`__ \  / /  / ___/  / ___/ / __ \ / / __  ";
+			echo " / / / / / / / /  / /__   / /    / /_/ // /_/ /  ";
+			echo "/_/ /_/ /_/ /_/   \___/  /_/     \____/ \____/   ";
+			echo "                                                 ";
+			ui_print "- æ˜¯å¦éœ€è¦å®‰è£… microG ?"
+			ui_print "   Do you want to install microG  ?"
+			ui_print "- æŒ‰ä¸‹éŸ³é‡åŠ =æ˜¯ï¼ŒæŒ‰ä¸‹éŸ³é‡å‡=å¦,å’Œé€€å‡º"
+			ui_print "   Press  Vol+ = Yes , Press Vol- = No, and exit "
 			if $VKSEL; then
 				ui_print " "
 				ui_print " "
-				ui_print "   Available Icon Packs are as below- "
-				ui_print " - Icon Pack 1"
-				ui_print " - Icon Pack 2"
-				ui_print " - Icon Pack 3"
 				ui_print " "
-				ui_print " "
+				ui_print "- æ˜¯å¦éœ€è¦æ‰§è¡Œå¹²å‡€å®‰è£…microGï¼Ÿ"
 #				ui_print "   Pick among 1, 2 or 3" 
-				ui_print "   Whether to clear the microG before installing it?(ÊÇ·ñĞèÒªÖ´ĞĞ¸É¾»°²×°microG)" 
+				ui_print "   Whether to clear the microG before installing it?" 
 				ui_print " "
 #				ui_print "   Vol+ = Icon Pack-1, Vol- = Show next"
-				ui_print "   Vol+ = Yes, Vol- = NO£¨°´ÏÂÒôÁ¿¼Ó=ÊÇ£¬°´ÏÂÒôÁ¿¼õ=·ñ)"
-				JAI=true
+				ui_print "- æŒ‰ä¸‹éŸ³é‡åŠ =æ˜¯ï¼ŒæŒ‰ä¸‹éŸ³é‡å‡=å¦"
+				ui_print "   Vol+ = Yes, Vol- = NO"
+				microG=true
 				if $VKSEL; then
-					JAIA1=true
-					JAIA2=false
-					JAIA3=false					
+					clearG1=true
+					clearG2=false
+					clearG3=false					
 				else
 #				    ui_print " "
 #				    ui_print " "
@@ -55,47 +47,94 @@ IFS=$OIFS
 #					ui_print " "
 #					ui_print "   Vol+ = Icon Pack-2, Vol- = Icon Pack-3" 
 #					if $VKSEL; then
-#						JAIA1=false
-#						JAIA2=true
-#						JAIA3=false	
+#						clearG1=false
+#						clearG2=true
+#						clearG3=false	
 #					else
-#						JAIA1=false
-#						JAIA2=false
-#						JAIA3=true	
-					ui_print "   ÄãÑ¡ÔñÁËÖ±½Ó°²×°microG,ÇëÖØÆôÊÖ»úÊ¹°²×°ÉúĞ§"
+#						clearG1=false
+#						clearG2=false
+#						clearG3=true	
+					clearG1=false
+					clearG2=true
+					clearG3=false
+					ui_print "- ä½ é€‰æ‹©äº†ç›´æ¥å®‰è£…microG,æ­£åœ¨å®‰è£…ä¸­..."
+					ui_print "   You chose to install microG directly, it is being installed..."
 #					fi
 				fi
 			else
-				JAI=false
-				ui_print "Installation aborted by user, so kthnxbye" 
+				microG=false
+				ui_print "- å®‰è£…è¢«å–æ¶ˆï¼ŒmicroGæœªç”Ÿæ•ˆ" 
+				ui_print "  The installation was cancelled and microG did not take effect" 
 				exit 1
 			fi
 		else
-	     	ui_print " Ultimate Icon Pack V2 installed successfully..." 
+			ui_print "- microGå·²å®‰è£…æˆåŠŸ" 
+	     	ui_print "  The microG has been installed successfully" 
 		fi
 	
 
-ui_print " Follow @cool_modules69 for more, thanks to @IconicIcons, SIS acherus and other substratum channel and all the people who supported "
-ui_print " Icon pack by @Jai_08 "
-ui_print "-  Wifi and signal icons u can choose from display cutout option, 10 different sets are present -"
+#ui_print "- Follow githubï¼štaoaoooo/qqç¾¤ï¼š273145623"
+#ui_print "  Follow Github: taoaoooo/QQ group: 273145623"
 
-mkdir -p $TMPDIR/system/product/overlay
+mkdir -p $TMPDIR/system
 
-if $JAI; then
-	ui_print "-  - - -  -"
-	if $JAIA1; then
-		ui_print "-  Ğ¶ÔØ¹È¸è·şÎñ¿ò¼Ü -"
+if $microG; then
+	ui_print ">"
+	if $clearG1; then
+		ui_print "-  æŒ‚è½½æ ¹ç›®å½•..."
+		mount -o rw,remount / || echo "error code:85"
+		ui_print "-  Uninstall the gsf..."
 #		cp -f $TMPDIR/apk/B1.apk $TMPDIR/system/product/overlay
 #		cp -f $TMPDIR/apk/IP1.apk $TMPDIR/system/product/overlay
-#		Ğ¶ÔØgsf
-		sudo pm uninstall -k --user 0 com.google.android.webview 
-		ls /data/user/0/com.google.android.webview/ >/dev/null || echo "- Ğ¶ÔØÍê±Ï"
-	elif $JAIA2; then
+#		å¸è½½gsf
+		pm uninstall -k --user 0 com.google.android.gsf
+		rm -rf /system/priv-app/GoogleServicesFramework || echo "error code:91"
+		rm -rf /system/app/GoogleServicesFramework
+		rm -rf /system/product/priv-app/GoogleServicesFramework
+		rm -rf /system/product/app/GoogleServicesFramework
+		rm -rf /system/system_ext/priv-app/GoogleServicesFramework || echo "error code:95"
+		rm -rf /system/system_ext/app/GoogleServicesFramework
+		ui_print "-  Uninstall the gms..."
+		pm uninstall -k --user 0 com.google.android.gms
+		rm -rf /system/priv-app/PrebuiltGmsCore
+		rm -rf /system/app/PrebuiltGmsCore
+		rm -rf /system/product/priv-app/PrebuiltGmsCore
+		rm -rf /system/product/app/PrebuiltGmsCore
+		rm -rf /system/system_ext/priv-app/PrebuiltGmsCore
+		rm -rf /system/system_ext/app/PrebuiltGmsCore
+		ui_print "-  Uninstall the playStore..."
+		pm uninstall -k --user 0 com.google.android.vending
+		rm -rf /system/priv-app/Phonesky
+		rm -rf /system/app/Phonesky
+		rm -rf /system/product/priv-app/Phonesky
+		rm -rf /system/product/app/Phonesky
+		rm -rf /system/system_ext/priv-app/Phonesky
+		rm -rf /system/system_ext/app/Phonesky
+		ui_print "-  Uninstall the googleContactsSync..."
+		pm uninstall -k --user 0 com.google.android.syncadapters.contacts
+		rm -rf /system/priv-app/GoogleContactsSyncAdapter
+		rm -rf /system/app/GoogleContactsSyncAdapter
+		rm -rf /system/product/priv-app/GoogleContactsSyncAdapter
+		rm -rf /system/product/app/GoogleContactsSyncAdapter
+		rm -rf /system/system_ext/priv-app/GoogleContactsSyncAdapter
+		rm -rf /system/system_ext/app/GoogleContactsSyncAdapter
+		ui_print "-  Uninstall the droidguard..."
+		pm uninstall -k --user 0 org.microg.gms.droidguard
+		rm -rf /system/priv-app/DroidGuard
+		rm -rf /system/app/DroidGuard
+		rm -rf /system/product/priv-app/DroidGuard
+		rm -rf /system/product/app/DroidGuard
+		rm -rf /system/system_ext/priv-app/DroidGuard
+		rm -rf /system/system_ext/app/DroidGuard
+		ls /data/user/0/com.google.android.vending >/dev/null || echo "-  å¸è½½æ®‹ç•™å·²æ¸…ç†"&&echo "  Uninstallation residue has been cleared"
+		ui_print "-  æ¢å¤æ ¹ç›®å½•åªè¯»..."
+		mount -o ro,remount /
+	elif $clearG2; then
 #		ui_print "-  Icon Pack 2 selected -"
-		ui_print "- *********************** -"
+		ui_print "- å®‰è£…å®Œæ¯• -"
 #			cp -f $TMPDIR/apk/B2.apk $TMPDIR/system/product/overlay
 #		cp -f $TMPDIR/apk/IP2.apk $TMPDIR/system/product/overlay
-#	elif $JAIA3; then
+#	elif $clearG3; then
 #		ui_print "-  Icon Pack 3 selected  -"
 #			cp -f $TMPDIR/apk/B3.apk $TMPDIR/system/product/overlay
 #		cp -f $TMPDIR/apk/IP3.apk $TMPDIR/system/product/overlay
@@ -107,4 +146,4 @@ fi
 
 ui_print " "
 ui_print " "
-ui_print "-  Done  -"
+ui_print "- Done  -"

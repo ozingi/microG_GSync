@@ -5,6 +5,7 @@ VisualStudioVersion = 17.0.31606.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "microG_playStore_GoogleContactsSync_installer", "microG_playStore_GoogleContactsSync_installer", "{4BA71F79-35C1-4DB9-93C6-A21C9CD0429B}"
 	ProjectSection(SolutionItems) = preProject
+		install.sh = install.sh
 		module.prop = module.prop
 		uninstall.sh = uninstall.sh
 	EndProjectSection
@@ -23,6 +24,53 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{05C278
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unityfiles", "unityfiles", "{64C7D387-714D-40AA-989A-A5D901D9EA8C}"
+	ProjectSection(SolutionItems) = preProject
+		common\unityfiles\addon.sh = common\unityfiles\addon.sh
+		common\unityfiles\util_functions.sh = common\unityfiles\util_functions.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{CD84208C-ED97-4E56-962E-38605E7CB44E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "addon", "addon", "{B43D4A1E-A2F1-4119-8660-B8AF78EA6E40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "META-INF", "META-INF", "{3161D813-994D-4871-A319-65E84794B857}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Volume-Key-Selector", "Volume-Key-Selector", "{C5C718CF-60F8-451D-B52F-4B7DD11D7A07}"
+	ProjectSection(SolutionItems) = preProject
+		addon\Volume-Key-Selector\preinstall.sh = addon\Volume-Key-Selector\preinstall.sh
+		addon\Volume-Key-Selector\README.md = addon\Volume-Key-Selector\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{C2F1E6AC-3C59-48AD-B41A-CFBB268465C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "arm", "arm", "{5B544A41-6980-4A68-A51A-467708BDA434}"
+	ProjectSection(SolutionItems) = preProject
+		addon\Volume-Key-Selector\tools\arm\keycheck = addon\Volume-Key-Selector\tools\arm\keycheck
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "com", "com", "{51D5AD27-765A-4A21-9CBD-7AD2A325FEDA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "google", "google", "{56E984B0-500E-454D-B610-32D39DF45A22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "android", "android", "{372761AC-3ECE-4A90-9847-1BF1B2ED91D8}"
+	ProjectSection(SolutionItems) = preProject
+		META-INF\com\google\android\update-binary = META-INF\com\google\android\update-binary
+		META-INF\com\google\android\updater-script = META-INF\com\google\android\updater-script
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "system", "system", "{DC64D1B3-6C84-4714-8EBE-B85118A3C94E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "etc", "etc", "{EFADDEAD-3C98-4B31-882D-387CE9E56A5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "permissions", "permissions", "{68A144E6-C160-499F-9FA6-399CC74D23F6}"
+	ProjectSection(SolutionItems) = preProject
+		system\etc\permissions\privapp-permissions-org.microG.xml = system\etc\permissions\privapp-permissions-org.microG.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sysconfig", "sysconfig", "{D4D999CF-993A-4221-9A5F-C12B1EACA8F9}"
+	ProjectSection(SolutionItems) = preProject
+		system\etc\sysconfig\org.microG.xml = system\etc\sysconfig\org.microG.xml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
@@ -32,6 +80,19 @@ Global
 		{7DCA2B65-6A35-445E-A53A-41C3AD82ED41} = {4BA71F79-35C1-4DB9-93C6-A21C9CD0429B}
 		{05C27810-9028-4D78-B077-2682C5B05AA0} = {4BA71F79-35C1-4DB9-93C6-A21C9CD0429B}
 		{64C7D387-714D-40AA-989A-A5D901D9EA8C} = {05C27810-9028-4D78-B077-2682C5B05AA0}
+		{CD84208C-ED97-4E56-962E-38605E7CB44E} = {64C7D387-714D-40AA-989A-A5D901D9EA8C}
+		{B43D4A1E-A2F1-4119-8660-B8AF78EA6E40} = {4BA71F79-35C1-4DB9-93C6-A21C9CD0429B}
+		{3161D813-994D-4871-A319-65E84794B857} = {4BA71F79-35C1-4DB9-93C6-A21C9CD0429B}
+		{C5C718CF-60F8-451D-B52F-4B7DD11D7A07} = {B43D4A1E-A2F1-4119-8660-B8AF78EA6E40}
+		{C2F1E6AC-3C59-48AD-B41A-CFBB268465C9} = {C5C718CF-60F8-451D-B52F-4B7DD11D7A07}
+		{5B544A41-6980-4A68-A51A-467708BDA434} = {C2F1E6AC-3C59-48AD-B41A-CFBB268465C9}
+		{51D5AD27-765A-4A21-9CBD-7AD2A325FEDA} = {3161D813-994D-4871-A319-65E84794B857}
+		{56E984B0-500E-454D-B610-32D39DF45A22} = {51D5AD27-765A-4A21-9CBD-7AD2A325FEDA}
+		{372761AC-3ECE-4A90-9847-1BF1B2ED91D8} = {56E984B0-500E-454D-B610-32D39DF45A22}
+		{DC64D1B3-6C84-4714-8EBE-B85118A3C94E} = {4BA71F79-35C1-4DB9-93C6-A21C9CD0429B}
+		{EFADDEAD-3C98-4B31-882D-387CE9E56A5D} = {DC64D1B3-6C84-4714-8EBE-B85118A3C94E}
+		{68A144E6-C160-499F-9FA6-399CC74D23F6} = {EFADDEAD-3C98-4B31-882D-387CE9E56A5D}
+		{D4D999CF-993A-4221-9A5F-C12B1EACA8F9} = {EFADDEAD-3C98-4B31-882D-387CE9E56A5D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9A682400-E9CD-4D0B-A6C8-FE883CD2409B}

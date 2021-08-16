@@ -1,4 +1,4 @@
-#!/sbin/sh
+﻿#!/sbin/sh
 
 TMPDIR=/dev/tmp
 MOUNTPATH=/dev/magisk_img

@@ -1,4 +1,4 @@
-if $SYSOVER || $DIRSEPOL; then
+﻿if $SYSOVER || $DIRSEPOL; then
   rm -f $INFO; mount -o rw,remount /system
   [ -L /system/vendor ] && mount -o rw,remount /vendor
 fi

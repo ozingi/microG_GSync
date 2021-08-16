@@ -147,13 +147,14 @@ cleanup() {
   [ -d "$RD" ] && repack_ramdisk
   if $MAGISK; then
     imageless_magisk || unmount_magisk_img
-    ui_print " "
+    ui_print "    *******************************************"
+    ui_print "    *      github：taoaoooo/qq群：273145623    *
+   "
     ui_print "    *******************************************"
     ui_print "    *      Powered by Magisk (@topjohnwu)     *"
     ui_print "    *******************************************"
   fi
   $BOOTMODE || recovery_cleanup
-  ui_print " "
   ui_print "    *******************************************"
   ui_print "    *    Unity by ahrion & zackptg5 @ XDA     *"
   ui_print "    *******************************************"
@@ -647,6 +648,7 @@ unity_install() {
 
 unity_uninstall() {
   ui_print " "
+  ui_print "- 卸载中..."
   ui_print "- Uninstalling"
   
   # Uninstall Addons
@@ -669,6 +671,7 @@ unity_uninstall() {
   run_addons -v
 
   ui_print " "
+  ui_print "-  完成卸载 -"
   ui_print "- Completing uninstall -"
 }
 
@@ -739,9 +742,11 @@ unity_main() {
       ui_print "  ! Running upgrade..."
       unity_upgrade
     elif [ $(grep_prop versionCode $MOD_VER) -ge $(grep_prop versionCode $TMPDIR/module.prop) ]; then
+      ui_print "-  !当前安装版本小于等于已安装版本!"
       ui_print "  ! Current or newer version detected!"
       unity_uninstall
     else
+      ui_print "-  !当前安装版本高于已安装版本，进行升级...!"
       ui_print "  ! Older version detected! Upgrading..."
       unity_upgrade
     fi

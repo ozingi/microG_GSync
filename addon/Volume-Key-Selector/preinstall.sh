@@ -1,10 +1,12 @@
-# External Tools
+﻿# External Tools
 
 chmod -R 0755 $TMPDIR/addon/Volume-Key-Selector/tools
 cp -R $TMPDIR/addon/Volume-Key-Selector/tools $UF 2>/dev/null
 
 keytest() {
-  ui_print "- Vol Key Test -"
+  ui_print "- 音量按键测试 "
+  ui_print "  Vol Key Test "
+  ui_print "- 请按下任意音量按键 "
   ui_print "  Press a Vol Key"
   (/system/bin/getevent -lc 1 2>&1 | /system/bin/grep VOLUME | /system/bin/grep " DOWN" > $TMPDIR/events) || return 1
   return 0
@@ -53,11 +55,14 @@ case $(echo $(basename $ZIPFILE) | tr '[:upper:]' '[:lower:]') in
        VKSEL=chooseport
      else
        VKSEL=chooseportold
+       ui_print "-  ! 使用旧的方法进行按键校验"
        ui_print "  ! Legacy device detected! Using old keycheck method"
        ui_print " "
        ui_print "- Vol Key Programming -"
+       ui_print "-  请再按一次音量+:"
        ui_print "  Press Vol Up Again:"
        $VKSEL "UP"
+       ui_print "-  请再按一次音量-:"
        ui_print "  Press Vol Down"
        $VKSEL "DOWN"
      fi;;

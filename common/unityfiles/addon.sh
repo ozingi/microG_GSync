@@ -1,4 +1,4 @@
-#!/sbin/sh
+﻿#!/sbin/sh
 # ADDOND_VERSION=2
 
 . /tmp/backuptool.functions

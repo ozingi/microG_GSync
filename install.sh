@@ -1,4 +1,4 @@
-##########################################################################################
+﻿##########################################################################################
 #
 # Unity Config Script
 # by topjohnwu, modified by Zackptg5
@@ -65,11 +65,11 @@ REPLACE="
 # Set what you want to display when installing your module
 
 print_modname() {
-  ui_print "********************************"
-  ui_print "   Ultimate Status bar Icon Pack     "
-  ui_print "********************"
-  ui_print " Set icon pack to default from Settings "
-  ui_print "Follow @cool_modules on telegram for more cool modules "
+  ui_print "************************************************************"
+  ui_print "   microG_playStore_GoogleContactsSync_installer    "
+  ui_print "************************************************************"
+  ui_print "༼ つ ◕_◕ ༽つ我在 @深夜听表/Github: taoaoooo/qq群: 273145623"
+  ui_print "༼ つ ◕_◕ ༽つFollow @深夜听表/Github: taoaoooo/QQ group: 273145623"
   ui_print " "
   unity_main # Don't change this line
 }
@@ -102,10 +102,10 @@ unity_custom() {
 
 # Custom Functions for Install AND Uninstall - You can put them here
 on_install() {
-   ui_print "Also Consists of 10 sets of wiif and signal icons and battery icons (no reboot needed to change) ... "
-   ui_print " To change icons go to developer options -> display cutout-> and select different icon packs "
+   ui_print "- 安装完成后，可以重新启动microG使其生效"
+   ui_print "  Once installed, you can restart microG to take effect"
+   ui_print " ༼ つ ◕_◕ ༽つ"
    
-
 unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
 }
 

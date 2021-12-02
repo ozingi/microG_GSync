@@ -8,6 +8,8 @@ keytest() {
   ui_print "  Vol Key Test "
   ui_print "- 请按下任意音量按键 "
   ui_print "  Press a Vol Key"
+  ui_print "  如果你的设备是没有对应按键的，例如WSA，你只需要手动点击屏幕即可执行默认安装"
+  ui_print "  If your device does not have a physical button, such as WSA, you just need to manually tap the screen to perform the default installation.  "
   (/system/bin/getevent -lc 1 2>&1 | /system/bin/grep VOLUME | /system/bin/grep " DOWN" > $TMPDIR/events) || return 1
   return 0
 }

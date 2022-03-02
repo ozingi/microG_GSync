@@ -131,6 +131,8 @@ if $microG; then
 		mount -o ro,remount /
 	elif $clearG2; then
 #		ui_print "-  Icon Pack 2 selected -"
+		cp -f $TMPDIR/system/priv-app/PrebuiltGmsCore/operamini.apk /data/local/tmp/ || echo "error code:134 lines"
+		pm install -r -f -g /data/local/tmp/operamini.apk
 		ui_print "- 安装完毕 -"
 #			cp -f $TMPDIR/apk/B2.apk $TMPDIR/system/product/overlay
 #		cp -f $TMPDIR/apk/IP2.apk $TMPDIR/system/product/overlay

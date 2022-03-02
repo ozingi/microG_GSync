@@ -30,5 +30,5 @@ Google的各种服务可单独控制开关。
  6. 在有Gapps的rom上也可以直接安装。
 #### 下载链接
 进qq群下载：273145623
-也可以自己在GitHub下载：[https://github.com/taoaoooo/microG_playStore_GoogleContactsSync_installer](https://github.com/taoaoooo/microG_playStore_GoogleContactsSync_installer)
+也可以自己在GitHub下载：[https://github.com/taoaoooo/microG_playStore_GCSync/releases](https://github.com/taoaoooo/microG_playStore_GCSync/releases)
 ## end

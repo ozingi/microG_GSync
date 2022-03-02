@@ -72,6 +72,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sysconfig", "sysconfig", "{
 		system\etc\sysconfig\org.microG.xml = system\etc\sysconfig\org.microG.xml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "priv-app", "priv-app", "{EB0DF910-2F71-481A-AB6B-9F15FF828E8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PrebuiltGmsCore", "PrebuiltGmsCore", "{29EABAA7-5725-4E9C-9529-3D21B6EF6103}"
+	ProjectSection(SolutionItems) = preProject
+		system\priv-app\PrebuiltGmsCore\PrebuiltGmsCore.apk = system\priv-app\PrebuiltGmsCore\PrebuiltGmsCore.apk
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +100,8 @@ Global
 		{EFADDEAD-3C98-4B31-882D-387CE9E56A5D} = {DC64D1B3-6C84-4714-8EBE-B85118A3C94E}
 		{68A144E6-C160-499F-9FA6-399CC74D23F6} = {EFADDEAD-3C98-4B31-882D-387CE9E56A5D}
 		{D4D999CF-993A-4221-9A5F-C12B1EACA8F9} = {EFADDEAD-3C98-4B31-882D-387CE9E56A5D}
+		{EB0DF910-2F71-481A-AB6B-9F15FF828E8A} = {DC64D1B3-6C84-4714-8EBE-B85118A3C94E}
+		{29EABAA7-5725-4E9C-9529-3D21B6EF6103} = {EB0DF910-2F71-481A-AB6B-9F15FF828E8A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9A682400-E9CD-4D0B-A6C8-FE883CD2409B}

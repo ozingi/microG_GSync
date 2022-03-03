@@ -81,18 +81,18 @@ mkdir -p $TMPDIR/system
 if $microG; then
 	ui_print ">"
 	if $clearG1; then
-		ui_print "-  挂载根目录..."
+		
 		mount -o rw,remount / || echo "error code:85"
 		ui_print "-  Uninstall the gsf..."
 #		cp -f $TMPDIR/apk/B1.apk $TMPDIR/system/product/overlay
 #		cp -f $TMPDIR/apk/IP1.apk $TMPDIR/system/product/overlay
 #		卸载gsf
 		pm uninstall -k --user 0 com.google.android.gsf
-		rm -rf /system/priv-app/GoogleServicesFramework || echo "error code:91"
+		rm -rf /system/priv-app/GoogleServicesFramework || echo ">>>"
 		rm -rf /system/app/GoogleServicesFramework
 		rm -rf /system/product/priv-app/GoogleServicesFramework
 		rm -rf /system/product/app/GoogleServicesFramework
-		rm -rf /system/system_ext/priv-app/GoogleServicesFramework || echo "error code:95"
+		rm -rf /system/system_ext/priv-app/GoogleServicesFramework || echo ">>>"
 		rm -rf /system/system_ext/app/GoogleServicesFramework
 		ui_print "-  Uninstall the gms..."
 		pm uninstall -k --user 0 com.google.android.gms
@@ -127,12 +127,38 @@ if $microG; then
 		rm -rf /system/system_ext/priv-app/DroidGuard
 		rm -rf /system/system_ext/app/DroidGuard
 		ls /data/user/0/com.google.android.vending >/dev/null || echo "-  卸载残留已清理"&&echo "  Uninstallation residue has been cleared"
+		ui_print "-  安装中......"
+		cp -f $TMPDIR/system/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk /data/local/tmp/ || echo "error code:134 lines"
+		cp -f $TMPDIR/system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk /data/local/tmp/
+		cp -f $TMPDIR/system/priv-app/DroidGuard/DroidGuard.apk /data/local/tmp/
+		cp -f $TMPDIR/system/priv-app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk /data/local/tmp/
+		cp -f $TMPDIR/system/priv-app/Phonesky/Phonesky.apk /data/local/tmp/
+		pm install -f -d -g --user 0 /data/local/tmp/GoogleServicesFramework.apk
+		pm install -f -d -g --user 0 /data/local/tmp/PrebuiltGmsCore.apk || echo "error code:136 lines"
+		pm install -f -d -g --user 0 /data/local/tmp/DroidGuard.apk
+		pm install -f -d -g --user 0 /data/local/tmp/GoogleContactsSyncAdapter.apk
+		pm install -f -d -g --user 0 /data/local/tmp/Phonesky.apk
+		rm -rf /data/local/tmp/* || echo "<<<"
 		ui_print "-  恢复根目录只读..."
 		mount -o ro,remount /
+		ui_print "- 安装完毕 -"
 	elif $clearG2; then
 #		ui_print "-  Icon Pack 2 selected -"
-		cp -f $TMPDIR/system/priv-app/PrebuiltGmsCore/operamini.apk /data/local/tmp/ || echo "error code:134 lines"
-		pm install -r -f -g /data/local/tmp/operamini.apk
+		ui_print "-  安装中..."
+		mount -o rw,remount / || echo "error code:147"
+		cp -f $TMPDIR/system/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk /data/local/tmp/ || echo "error code:148 lines"
+		cp -f $TMPDIR/system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk /data/local/tmp/
+		cp -f $TMPDIR/system/priv-app/DroidGuard/DroidGuard.apk /data/local/tmp/
+		cp -f $TMPDIR/system/priv-app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk /data/local/tmp/
+		cp -f $TMPDIR/system/priv-app/Phonesky/Phonesky.apk /data/local/tmp/
+		pm install -r -f -d -g --user 0 /data/local/tmp/GoogleServicesFramework.apk
+		pm install -r -f -d -g --user 0 /data/local/tmp/DroidGuard.apk
+		pm install -r -f -d -g --user 0 /data/local/tmp/GoogleContactsSyncAdapter.apk
+		pm install -r -f -d -g --user 0 /data/local/tmp/Phonesky.apk
+#		pm install -r -f -d -g --user 0 /data/local/tmp/PrebuiltGmsCore.apk
+		rm -rf /data/local/tmp/* || echo "<<<"
+		ui_print "-  恢复根目录只读..."
+		mount -o ro,remount /
 		ui_print "- 安装完毕 -"
 #			cp -f $TMPDIR/apk/B2.apk $TMPDIR/system/product/overlay
 #		cp -f $TMPDIR/apk/IP2.apk $TMPDIR/system/product/overlay

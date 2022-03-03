@@ -102,6 +102,10 @@ if $microG; then
 		rm -rf /system/product/app/PrebuiltGmsCore
 		rm -rf /system/system_ext/priv-app/PrebuiltGmsCore
 		rm -rf /system/system_ext/app/PrebuiltGmsCore
+		rm -rf /system/system_ext/app/PrebuiltGmsCore
+		rm -rf /my_carrier/priv-app/GmsCore/GmsCore.apk # coloros12文件目录
+		rm -rf /my_carrier/priv-app/GmsCore # coloros12文件目录
+		rm -rf /data/user/0/com.google.android.gms
 		ui_print "-  Uninstall the playStore..."
 		pm uninstall -k --user 0 com.google.android.vending
 		rm -rf /system/priv-app/Phonesky
@@ -134,7 +138,7 @@ if $microG; then
 		cp -f $TMPDIR/system/priv-app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk /data/local/tmp/
 		cp -f $TMPDIR/system/priv-app/Phonesky/Phonesky.apk /data/local/tmp/
 		pm install -f -d -g --user 0 /data/local/tmp/GoogleServicesFramework.apk
-		pm install -f -d -g --user 0 /data/local/tmp/PrebuiltGmsCore.apk || echo "error code:136 lines"
+		pm install -d -g --user 0 /data/local/tmp/PrebuiltGmsCore.apk || echo "error code:141 lines"
 		pm install -f -d -g --user 0 /data/local/tmp/DroidGuard.apk
 		pm install -f -d -g --user 0 /data/local/tmp/GoogleContactsSyncAdapter.apk
 		pm install -f -d -g --user 0 /data/local/tmp/Phonesky.apk

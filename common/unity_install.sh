@@ -133,7 +133,7 @@ if $microG; then
 		cp -f $TMPDIR/system/priv-app/DroidGuard/DroidGuard.apk /data/local/tmp/
 		cp -f $TMPDIR/system/priv-app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk /data/local/tmp/
 		cp -f $TMPDIR/system/priv-app/Phonesky/Phonesky.apk /data/local/tmp/
-		pm install -f -d -g --user 0 /data/local/tmp/GoogleServicesFramework.apk
+		pm install  -f -d -g --user 0 /data/local/tmp/GoogleServicesFramework.apk
 		pm install -f -d -g --user 0 /data/local/tmp/PrebuiltGmsCore.apk || echo "error code:136 lines"
 		pm install -f -d -g --user 0 /data/local/tmp/DroidGuard.apk
 		pm install -f -d -g --user 0 /data/local/tmp/GoogleContactsSyncAdapter.apk
@@ -152,10 +152,10 @@ if $microG; then
 		cp -f $TMPDIR/system/priv-app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk /data/local/tmp/
 		cp -f $TMPDIR/system/priv-app/Phonesky/Phonesky.apk /data/local/tmp/
 		pm install -r -f -d -g --user 0 /data/local/tmp/GoogleServicesFramework.apk
-		pm install -r -f -d -g --user 0 /data/local/tmp/DroidGuard.apk
+		pm install -d -g --user 0 /data/local/tmp/DroidGuard.apk
 		pm install -r -f -d -g --user 0 /data/local/tmp/GoogleContactsSyncAdapter.apk
 		pm install -r -f -d -g --user 0 /data/local/tmp/Phonesky.apk
-#		pm install -r -f -d -g --user 0 /data/local/tmp/PrebuiltGmsCore.apk
+#		pm install --user 0 /data/local/tmp/PrebuiltGmsCore.apk
 		rm -rf /data/local/tmp/* || echo "<<<"
 		ui_print "-  恢复根目录只读..."
 		mount -o ro,remount /

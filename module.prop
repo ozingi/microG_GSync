@@ -1,6 +1,6 @@
 id=microG_tao
 name=microG_playStore_GoogleContactsSync
-version=v2.2.02
-versionCode=22.02
+version=v2.2.03
+versionCode=2203
 author=by 深夜听表 
 description=github_taoaoooo，qq群_273145623，优雅的安装microG，使用音量加减进行选择是否清洁安装，其中包含了google通讯录同步，为了适配兼容性，apk都加载在/system/pirv-app。

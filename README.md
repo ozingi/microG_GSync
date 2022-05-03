@@ -20,7 +20,18 @@ Google的各种服务可单独控制开关。
 如果是原先有GMS的手机一定要卸载GMS才行，在酷安就有好多人给我反馈说装不上play store，或者play store安装好了play store也会连不上更新服务，Google账户的通讯录同步用不了之类的。而这些我也遇到过，要手动去卸载干净GMS再安装能解决，但是挺繁琐的，所以我想到了做个magisk模块吧，方便自己也能分享给大家，节约不必要的时间浪费。
 ## 实现
 因为前几天下过一个支持安装过程用音量按键控制的magisk模块，这个音量按键控制的功能正好可以解决microG安装过程中是否需要执行清洁安装，所以马上在原有基础上改了起来，最后实现的效果如下，非常傻瓜式，看提示就能操作了。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5f95654f03f9490b9e69e53e41bce560.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTM1NDY1NTM=,size_16,color_FFFFFF,t_70)![在这里插入图片描述](https://img-blog.csdnimg.cn/e342d70f6f984fcc93d06529ae97411e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTM1NDY1NTM=,size_16,color_FFFFFF,t_70)
+
+
+<div style="width:768px">
+ <div style="width:49%;">
+  <img alt="图片笑死了" style="width:100%;float:left" src="https://img-blog.csdnimg.cn/5f95654f03f9490b9e69e53e41bce560.png" />
+ </div>
+ <div style="width:49%;float:right">
+	 <img alt="图片笑死了" style="width:100% " src="https://img-blog.csdnimg.cn/e342d70f6f984fcc93d06529ae97411e.png"/>
+ </div>
+</div>
+
+
 #### 功能描述
  1. 模块支持音量按键选择安装方式
  2. 支持清洁安装

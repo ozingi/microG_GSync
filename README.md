@@ -41,10 +41,11 @@ Google的各种服务可单独控制开关。
  6. 在有Gapps的rom上也可以直接安装。
 #### 下载链接
 进qq群下载：273145623
-也可以自己在GitHub下载：[microG_Sync](https://github.com/ozingi/microG_Sync)
+也可以自己在GitHub下载：[microG_GSync](https://github.com/ozingi/microG_GSync)
 
 ### 🥰如果喜欢你也可以请我喝白开水🥰
 
 ### [打赏 / Donate](https://ozingi.github.io/img/payment/Alipay.jpg)
 <img alt="图片笑死了" style="width:40% " src="https://ozingi.github.io/img/payment/Alipay.jpg"/>
+
 ## end

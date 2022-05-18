@@ -1,4 +1,4 @@
-# microG_playStore_GoogleContactsSync_installer
+# microG_GSync
 # 如何优雅的使用GMS，为此我做了个食用Google服务的magisk懒人包。
 ## 开端
 其实吧，我对google服务的需求并不大，我主要就是在play store下下软件，同步同步通讯录和用Google相机，所以我就在magisk仓库找到了microG体验了一下，挺好的，而且还有一个就是，之前我写的安装方法里的systemizer已经早就停止更新了，在android11用不了。

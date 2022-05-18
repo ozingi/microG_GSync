@@ -22,14 +22,14 @@ Google的各种服务可单独控制开关。
 因为前几天下过一个支持安装过程用音量按键控制的magisk模块，这个音量按键控制的功能正好可以解决microG安装过程中是否需要执行清洁安装，所以马上在原有基础上改了起来，最后实现的效果如下，非常傻瓜式，看提示就能操作了。
 
 
-<div style="width:768px">
- <div style="width:49%;">
-  <img alt="图片笑死了" style="width:100%;float:left" src="https://img-blog.csdnimg.cn/5f95654f03f9490b9e69e53e41bce560.png" />
- </div>
- <div style="width:49%;float:right">
-	 <img alt="图片笑死了" style="width:100% " src="https://img-blog.csdnimg.cn/e342d70f6f984fcc93d06529ae97411e.png"/>
- </div>
-</div>
+<table>
+  <tr>
+  </tr>
+  <tr>
+    <td valign="top"><img src="https://img-blog.csdnimg.cn/e342d70f6f984fcc93d06529ae97411e.png"></td>
+    <td valign="top"><img src="https://img-blog.csdnimg.cn/e342d70f6f984fcc93d06529ae97411e.png"></td>
+  </tr>
+ </table>
 
 
 #### 功能描述
@@ -42,4 +42,9 @@ Google的各种服务可单独控制开关。
 #### 下载链接
 进qq群下载：273145623
 也可以自己在GitHub下载：[https://github.com/taoaoooo/microG_playStore_GoogleContactsSync_installer](https://github.com/taoaoooo/microG_playStore_GoogleContactsSync_installer)
+
+### 🥰如果喜欢你也可以请我喝白开水🥰
+
+### [打赏 / Donate](https://ozingi.github.io/img/payment/Alipay.jpg)
+<img alt="图片笑死了" style="width:40% " src="https://ozingi.github.io/img/payment/Alipay.jpg"/>
 ## end

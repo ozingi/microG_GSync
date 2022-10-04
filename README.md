@@ -1,4 +1,4 @@
-# microG_playStore_GoogleContactsSync_installer
+# microG_GSync
 # 如何优雅的使用GMS，为此我做了个食用Google服务的magisk懒人包。
 ## 开端
 其实吧，我对google服务的需求并不大，我主要就是在play store下下软件，同步同步通讯录和用Google相机，所以我就在magisk仓库找到了microG体验了一下，挺好的，而且还有一个就是，之前我写的安装方法里的systemizer已经早就停止更新了，在android11用不了。
@@ -20,7 +20,18 @@ Google的各种服务可单独控制开关。
 如果是原先有GMS的手机一定要卸载GMS才行，在酷安就有好多人给我反馈说装不上play store，或者play store安装好了play store也会连不上更新服务，Google账户的通讯录同步用不了之类的。而这些我也遇到过，要手动去卸载干净GMS再安装能解决，但是挺繁琐的，所以我想到了做个magisk模块吧，方便自己也能分享给大家，节约不必要的时间浪费。
 ## 实现
 因为前几天下过一个支持安装过程用音量按键控制的magisk模块，这个音量按键控制的功能正好可以解决microG安装过程中是否需要执行清洁安装，所以马上在原有基础上改了起来，最后实现的效果如下，非常傻瓜式，看提示就能操作了。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5f95654f03f9490b9e69e53e41bce560.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTM1NDY1NTM=,size_16,color_FFFFFF,t_70)![在这里插入图片描述](https://img-blog.csdnimg.cn/e342d70f6f984fcc93d06529ae97411e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTM1NDY1NTM=,size_16,color_FFFFFF,t_70)
+
+
+<table>
+  <tr>
+  </tr>
+  <tr>
+    <td valign="top"><img src="https://img-blog.csdnimg.cn/5f95654f03f9490b9e69e53e41bce560.png"></td>
+    <td valign="top"><img src="https://img-blog.csdnimg.cn/e342d70f6f984fcc93d06529ae97411e.png"></td>
+  </tr>
+ </table>
+
+
 #### 功能描述
  1. 模块支持音量按键选择安装方式
  2. 支持清洁安装
@@ -30,5 +41,11 @@ Google的各种服务可单独控制开关。
  6. 在有Gapps的rom上也可以直接安装。
 #### 下载链接
 进qq群下载：273145623
-也可以自己在GitHub下载：[https://github.com/taoaoooo/microG_playStore_GoogleContactsSync_installer](https://github.com/taoaoooo/microG_playStore_GoogleContactsSync_installer)
-## end
+也可以自己在GitHub下载：[microG_GSync](https://github.com/ozingi/microG_GSync)
+
+### 🥰如果喜欢你也可以请我喝果汁🥰
+### [打赏 / Donate](https://ozingi.github.io/img/payment/Alipay.jpg)
+<img alt="图片笑死了" style="width:40% " src="https://ozingi.github.io/img/payment/Alipay.jpg"/>
+
+### 推广
+[进入web3领取最高1万元数字礼包](https://ozingi.github.io/html/AD/crypto.html)

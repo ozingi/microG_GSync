@@ -135,12 +135,12 @@ if $microG; then
 		cp -f $TMPDIR/system/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk /data/local/tmp/ || echo "error code:134 lines"
 		cp -f $TMPDIR/system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk /data/local/tmp/
 		cp -f $TMPDIR/system/priv-app/DroidGuard/DroidGuard.apk /data/local/tmp/
-		cp -f $TMPDIR/system/priv-app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk /data/local/tmp/
+#		cp -f $TMPDIR/system/priv-app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk /data/local/tmp/
 		cp -f $TMPDIR/system/priv-app/Phonesky/Phonesky.apk /data/local/tmp/
 		pm install -f -d -g --user 0 /data/local/tmp/GoogleServicesFramework.apk
 		pm install -d -g --user 0 /data/local/tmp/PrebuiltGmsCore.apk || echo "error code:141 lines"
 		pm install -f -d -g --user 0 /data/local/tmp/DroidGuard.apk
-		pm install -f -d -g --user 0 /data/local/tmp/GoogleContactsSyncAdapter.apk
+#		pm install -f -d -g --user 0 /data/local/tmp/GoogleContactsSyncAdapter.apk
 		pm install -f -d -g --user 0 /data/local/tmp/Phonesky.apk
 		rm -rf /data/local/tmp/* || echo "<<<"
 		ui_print "-  恢复根目录只读..."
@@ -153,11 +153,11 @@ if $microG; then
 		cp -f $TMPDIR/system/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk /data/local/tmp/ || echo "error code:148 lines"
 		cp -f $TMPDIR/system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk /data/local/tmp/
 		cp -f $TMPDIR/system/priv-app/DroidGuard/DroidGuard.apk /data/local/tmp/
-		cp -f $TMPDIR/system/priv-app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk /data/local/tmp/
+#		cp -f $TMPDIR/system/priv-app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk /data/local/tmp/
 		cp -f $TMPDIR/system/priv-app/Phonesky/Phonesky.apk /data/local/tmp/
 		pm install -r -f -d -g --user 0 /data/local/tmp/GoogleServicesFramework.apk
 		pm install -r -f -d -g --user 0 /data/local/tmp/DroidGuard.apk
-		pm install -r -f -d -g --user 0 /data/local/tmp/GoogleContactsSyncAdapter.apk
+#		pm install -r -f -d -g --user 0 /data/local/tmp/GoogleContactsSyncAdapter.apk
 		pm install -g --user 0 /data/local/tmp/Phonesky.apk
 #		pm install --user 0 /data/local/tmp/PrebuiltGmsCore.apk
 		rm -rf /data/local/tmp/* || echo "<<<"

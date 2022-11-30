@@ -42,7 +42,7 @@ Google的各种服务可单独控制开关。
 #### 下载链接
 进qq群下载：273145623
 也可以自己在GitHub下载：[microG_GSync](https://github.com/ozingi/microG_GSync)
-[安卓13之前选择v2.3.01的对应版本](https://github.com/ozingi/microG_GSync/releases/tag/release_v2.3.01)
+历史版本：[安卓13之前选择v2.3.01的对应版本](https://github.com/ozingi/microG_GSync/releases/tag/release_v2.3.01)
 ### 🥰如果喜欢你也可以请我喝果汁🥰
 ### [打赏 / Donate](https://ozingi.github.io/img/payment/Alipay.jpg)
 <img alt="图片笑死了" style="width:40% " src="https://ozingi.github.io/img/payment/Alipay.jpg"/>

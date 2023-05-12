@@ -28,7 +28,7 @@ IFS=$OIFS
 				ui_print " "
 				ui_print " "
 				ui_print " "
-				ui_print "- 是否需要执行干净安装microG？"
+				ui_print "- 是否需要执行干净安装microG？(已有GMS时将会删除，无法恢复，选择“否”进行普通安装)"
 #				ui_print "   Pick among 1, 2 or 3" 
 				ui_print "   Whether to clear the microG before installing it?" 
 				ui_print " "
@@ -102,8 +102,6 @@ if $microG; then
 		rm -rf /system/product/app/PrebuiltGmsCore
 		rm -rf /system/system_ext/priv-app/PrebuiltGmsCore
 		rm -rf /system/system_ext/app/PrebuiltGmsCore
-		rm -rf /system/system_ext/app/PrebuiltGmsCore
-		rm -rf /my_carrier/priv-app/GmsCore/GmsCore.apk # coloros12文件目录
 		rm -rf /my_carrier/priv-app/GmsCore # coloros12文件目录
 		rm -rf /data/user/0/com.google.android.gms
 		ui_print "-  Uninstall the playStore..."
@@ -135,12 +133,12 @@ if $microG; then
 		cp -f $TMPDIR/system/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk /data/local/tmp/ || echo "error code:134 lines"
 		cp -f $TMPDIR/system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk /data/local/tmp/
 		cp -f $TMPDIR/system/priv-app/DroidGuard/DroidGuard.apk /data/local/tmp/
-#		cp -f $TMPDIR/system/priv-app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk /data/local/tmp/
+		cp -f $TMPDIR/system/priv-app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk /data/local/tmp/
 		cp -f $TMPDIR/system/priv-app/Phonesky/Phonesky.apk /data/local/tmp/
 		pm install -f -d -g --user 0 /data/local/tmp/GoogleServicesFramework.apk
 		pm install -d -g --user 0 /data/local/tmp/PrebuiltGmsCore.apk || echo "error code:141 lines"
 		pm install -f -d -g --user 0 /data/local/tmp/DroidGuard.apk
-#		pm install -f -d -g --user 0 /data/local/tmp/GoogleContactsSyncAdapter.apk
+		pm install -f -d -g --user 0 /data/local/tmp/GoogleContactsSyncAdapter.apk
 		pm install -f -d -g --user 0 /data/local/tmp/Phonesky.apk
 		rm -rf /data/local/tmp/* || echo "<<<"
 		ui_print "-  恢复根目录只读..."
@@ -148,18 +146,19 @@ if $microG; then
 		ui_print "- 安装完毕 -"
 	elif $clearG2; then
 #		ui_print "-  Icon Pack 2 selected -"
+
 		ui_print "-  安装中..."
 		mount -o rw,remount / || echo "error code:147"
 		cp -f $TMPDIR/system/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk /data/local/tmp/ || echo "error code:148 lines"
 		cp -f $TMPDIR/system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk /data/local/tmp/
 		cp -f $TMPDIR/system/priv-app/DroidGuard/DroidGuard.apk /data/local/tmp/
-#		cp -f $TMPDIR/system/priv-app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk /data/local/tmp/
+		cp -f $TMPDIR/system/priv-app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk /data/local/tmp/
 		cp -f $TMPDIR/system/priv-app/Phonesky/Phonesky.apk /data/local/tmp/
 		pm install -r -f -d -g --user 0 /data/local/tmp/GoogleServicesFramework.apk
 		pm install -r -f -d -g --user 0 /data/local/tmp/DroidGuard.apk
-#		pm install -r -f -d -g --user 0 /data/local/tmp/GoogleContactsSyncAdapter.apk
-		pm install -g --user 0 /data/local/tmp/Phonesky.apk
-#		pm install --user 0 /data/local/tmp/PrebuiltGmsCore.apk
+		pm install -r -f -d -g --user 0 /data/local/tmp/GoogleContactsSyncAdapter.apk
+		/system/bin/pm install /data/local/tmp/Phonesky.apk && echo "success" >>$MODDIR/debug.log 2>&1 || (echo "warning2" >>$MODDIR/debug.log 2>&1)
+#		/system/bin/pm install /data/local/tmp/PrebuiltGmsCore.apk && echo "success" >>$MODDIR/debug.log 2>&1 || (echo "warning1" >>$MODDIR/debug.log 2>&1)
 		rm -rf /data/local/tmp/* || echo "<<<"
 		ui_print "-  恢复根目录只读..."
 		mount -o ro,remount /

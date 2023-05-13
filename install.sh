@@ -57,20 +57,15 @@ comp_check
 # Construct your own list here
 REPLACE="
     /system/app/GoogleServicesFramework
-    /system/app/Phonesky
     /system/app/PrebuiltGmsCore
     /system/product/app/PrebuiltGmsCore
-    /system/product/app/Phonesky
     /system/product/app/GoogleServicesFramework
     /system/product/priv-app/PrebuiltGmsCore
-    /system/product/priv-app/Phonesky
     /system/product/priv-app/GoogleServicesFramework
     /system/system_ext/app/GoogleServicesFramework
     /system/system_ext/app/PrebuiltGmsCore
-    /system/system_ext/app/Phonesky
     /system/system_ext/priv-app/GoogleServicesFramework
     /system/system_ext/priv-app/PrebuiltGmsCore
-    /system/system_ext/priv-app/Phonesky
 	/my_carrier/priv-app/GmsCore
  "
 #   /system/priv-app/GoogleServicesFramework
@@ -78,26 +73,17 @@ REPLACE="
 #   /system/priv-app/Phonesky
 #    /system/system_ext/priv-app/TrebuchetQuickStep
 #    /system/system_ext/priv-app/Lawnchair
- 
-
+#  /system/app/Phonesky
+#     /system/product/app/Phonesky
+#     /system/system_ext/app/Phonesky
+#     /system/product/priv-app/Phonesky
+#     /system/system_ext/priv-app/Phonesky
 ##########################################################################################
 # Custom Logic
 ##########################################################################################
 
 # Set what you want to display when installing your module
-APP="`ls $MODPATH/system/priv-app` `ls $MODPATH/system/app` `ls $MODPATH/system/system_ext/app`"
-# function
-hide_oat() {
-for APPS in $APP; do
-  mkdir -p `find $MODPATH/system -type d -name $APPS`/oat
-  touch `find $MODPATH/system -type d -name $APPS`/oat/.replace
-done
-}
 
-# hide
-hide_oat
-# 覆盖安装时处理
-rm -f /data/adb/modules/moto_widget_and_launcher/debug.log
 print_modname() {
   ui_print "************************************************************"
   ui_print "   microG_playStore_GoogleContactsSync_installer    "

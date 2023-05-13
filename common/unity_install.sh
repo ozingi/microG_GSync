@@ -105,7 +105,7 @@ if $microG; then
 		rm -rf /my_carrier/priv-app/GmsCore # coloros12文件目录
 		rm -rf /data/user/0/com.google.android.gms
 		ui_print "-  Uninstall the playStore..."
-		pm uninstall --user 0 com.google.android.vending
+		pm uninstall -k --user 0 com.google.android.vending
 		rm -rf /system/priv-app/Phonesky
 		rm -rf /system/app/Phonesky
 		rm -rf /system/product/priv-app/Phonesky

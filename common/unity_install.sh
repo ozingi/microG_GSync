@@ -87,7 +87,7 @@ if $microG; then
 #		cp -f $TMPDIR/apk/B1.apk $TMPDIR/system/product/overlay
 #		cp -f $TMPDIR/apk/IP1.apk $TMPDIR/system/product/overlay
 #		卸载gsf
-		pm uninstall -k --user 0 com.google.android.gsf
+		pm uninstall --user 0 com.google.android.gsf
 		rm -rf /system/priv-app/GoogleServicesFramework || echo ">>>"
 		rm -rf /system/app/GoogleServicesFramework
 		rm -rf /system/product/priv-app/GoogleServicesFramework
@@ -95,7 +95,7 @@ if $microG; then
 		rm -rf /system/system_ext/priv-app/GoogleServicesFramework || echo ">>>"
 		rm -rf /system/system_ext/app/GoogleServicesFramework
 		ui_print "-  Uninstall the gms..."
-		pm uninstall -k --user 0 com.google.android.gms
+		pm uninstall --user 0 com.google.android.gms
 		rm -rf /system/priv-app/PrebuiltGmsCore
 		rm -rf /system/app/PrebuiltGmsCore
 		rm -rf /system/product/priv-app/PrebuiltGmsCore
@@ -105,7 +105,7 @@ if $microG; then
 		rm -rf /my_carrier/priv-app/GmsCore # coloros12文件目录
 		rm -rf /data/user/0/com.google.android.gms
 		ui_print "-  Uninstall the playStore..."
-		pm uninstall -k --user 0 com.google.android.vending
+		pm uninstall --user 0 com.google.android.vending
 		rm -rf /system/priv-app/Phonesky
 		rm -rf /system/app/Phonesky
 		rm -rf /system/product/priv-app/Phonesky
@@ -113,7 +113,7 @@ if $microG; then
 		rm -rf /system/system_ext/priv-app/Phonesky
 		rm -rf /system/system_ext/app/Phonesky
 		ui_print "-  Uninstall the googleContactsSync..."
-		pm uninstall -k --user 0 com.google.android.syncadapters.contacts
+		pm uninstall --user 0 com.google.android.syncadapters.contacts
 		rm -rf /system/priv-app/GoogleContactsSyncAdapter
 		rm -rf /system/app/GoogleContactsSyncAdapter
 		rm -rf /system/product/priv-app/GoogleContactsSyncAdapter
@@ -121,7 +121,7 @@ if $microG; then
 		rm -rf /system/system_ext/priv-app/GoogleContactsSyncAdapter
 		rm -rf /system/system_ext/app/GoogleContactsSyncAdapter
 		ui_print "-  Uninstall the droidguard..."
-		pm uninstall -k --user 0 org.microg.gms.droidguard
+		pm uninstall --user 0 org.microg.gms.droidguard
 		rm -rf /system/priv-app/DroidGuard
 		rm -rf /system/app/DroidGuard
 		rm -rf /system/product/priv-app/DroidGuard
@@ -136,10 +136,10 @@ if $microG; then
 		cp -f $TMPDIR/system/priv-app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk /data/local/tmp/
 		cp -f $TMPDIR/system/priv-app/Phonesky/Phonesky.apk /data/local/tmp/
 		pm install -f -d -g --user 0 /data/local/tmp/GoogleServicesFramework.apk
-		pm install -d -g --user 0 /data/local/tmp/PrebuiltGmsCore.apk || echo "error code:141 lines"
+		pm install -f -d -g --user 0 /data/local/tmp/PrebuiltGmsCore.apk || echo "error code:141 lines"
 		pm install -f -d -g --user 0 /data/local/tmp/DroidGuard.apk
 		pm install -f -d -g --user 0 /data/local/tmp/GoogleContactsSyncAdapter.apk
-		pm install -f -d -g --user 0 /data/local/tmp/Phonesky.apk
+		pm install -f -g --user 0 /data/local/tmp/Phonesky.apk
 		rm -rf /data/local/tmp/* || echo "<<<"
 		ui_print "-  恢复根目录只读..."
 		mount -o ro,remount /
@@ -154,11 +154,11 @@ if $microG; then
 		cp -f $TMPDIR/system/priv-app/DroidGuard/DroidGuard.apk /data/local/tmp/
 		cp -f $TMPDIR/system/priv-app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk /data/local/tmp/
 		cp -f $TMPDIR/system/priv-app/Phonesky/Phonesky.apk /data/local/tmp/
-		pm install -r -f -d -g --user 0 /data/local/tmp/GoogleServicesFramework.apk
-		pm install -r -f -d -g --user 0 /data/local/tmp/DroidGuard.apk
-		pm install -r -f -d -g --user 0 /data/local/tmp/GoogleContactsSyncAdapter.apk
-		/system/bin/pm install /data/local/tmp/Phonesky.apk && echo "success" >>$MODDIR/debug.log 2>&1 || (echo "warning2" >>$MODDIR/debug.log 2>&1)
-#		/system/bin/pm install /data/local/tmp/PrebuiltGmsCore.apk && echo "success" >>$MODDIR/debug.log 2>&1 || (echo "warning1" >>$MODDIR/debug.log 2>&1)
+		pm install -f -d -g --user 0 /data/local/tmp/GoogleServicesFramework.apk
+		pm install -f -d -g --user 0 /data/local/tmp/DroidGuard.apk
+		pm install -f -d -g --user 0 /data/local/tmp/GoogleContactsSyncAdapter.apk
+		pm install -f -g --user 0 /data/local/tmp/Phonesky.apk && echo "success" >>$MODDIR/install.log 2>&1 || (echo "warning2" >>$MODDIR/install.log 2>&1)
+#		pm install -f -d -g /data/local/tmp/PrebuiltGmsCore.apk && echo "success" >>$MODDIR/install.log 2>&1 || (echo "warning1" >>$MODDIR/install.log 2>&1)
 		rm -rf /data/local/tmp/* || echo "<<<"
 		ui_print "-  恢复根目录只读..."
 		mount -o ro,remount /

@@ -9,8 +9,8 @@ if [ -z $FIRST ]; then
  # wait
     sleep 20
 # 修复microG
-    /system/bin/pm install $MODDIR/system/priv-app/PrebuiltGmsCore.apk && echo "修复成功" >>$MODDIR/debug.log 2>&1 || (echo "安装失败1" >>$MODDIR/debug.log 2>&1)
-    /system/bin/pm install $MODDIR/system/priv-app/Phonesky.apk && echo "修复成功" >>$MODDIR/debug.log 2>&1 || (echo "安装失败2" >>$MODDIR/debug.log 2>&1)
+    pm install -f -d -g $MODDIR/system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk && echo "修复成功1" >>$MODDIR/debug.log 2>&1 || (echo "安装失败1" >>$MODDIR/debug.log 2>&1)
+#    pm install -g $MODDIR/system/priv-app/Phonesky/Phonesky.apk && echo "修复成功2" >>$MODDIR/debug.log 2>&1 || (echo "安装失败2" >>$MODDIR/debug.log 2>&1)
 else
    (
 :<<EOF

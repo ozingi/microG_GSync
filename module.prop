@@ -1,7 +1,7 @@
 id=microG_tao
 name=microG_Gsync
-version=v2.7.23
-versionCode=2723
+version=v2.8.02
+versionCode=2802
 author=by 深夜听表 
 description= 优雅的安装microG，使用音量加减进行选择是否清洁安装，清洁安装时会将原有GMS删除，复原时需要手动安装其他Gapps包。为了适配兼容性，apk都加载在/system/pirv-app, qq群_273145623。
 updateJson=https://ozingi.github.io/json/mModule/update/microG_GSync/updateJson.json

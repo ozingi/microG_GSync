@@ -148,7 +148,7 @@ cleanup() {
   if $MAGISK; then
     imageless_magisk || unmount_magisk_img
     ui_print "    *******************************************"
-    ui_print "    *      github：taoaoooo/qq群：273145623    *
+    ui_print "    *      github：ozingi/qq群：273145623    *
    "
     ui_print "    *******************************************"
     ui_print "    *      Powered by Magisk (@topjohnwu)     *"

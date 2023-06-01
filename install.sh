@@ -61,12 +61,18 @@ REPLACE="
     /system/product/app/PrebuiltGmsCore
     /system/product/app/GoogleServicesFramework
     /system/product/priv-app/PrebuiltGmsCore
+    /system/product/priv-app/GmsCore
     /system/product/priv-app/GoogleServicesFramework
     /system/system_ext/app/GoogleServicesFramework
     /system/system_ext/app/PrebuiltGmsCore
     /system/system_ext/priv-app/GoogleServicesFramework
     /system/system_ext/priv-app/PrebuiltGmsCore
-	/my_carrier/priv-app/GmsCore
+	/system/my_carrier/priv-app/GmsCore
+    /system/my_bigball/priv-app/GmsCore
+    /system/my_heytap/priv-app/GmsCore
+    /system/my_carrier/non_overlay/priv-app/GoogleServicesFramework
+    /system/my_bigball/non_overlay/priv-app/GoogleServicesFramework
+    /system/my_heytap/non_overlay/priv-app/GoogleServicesFramework
  "
 #   /system/priv-app/GoogleServicesFramework
 #   /system/priv-app/PrebuiltGmsCore
@@ -86,10 +92,9 @@ REPLACE="
 
 print_modname() {
   ui_print "************************************************************"
-  ui_print "   microG_playStore_GoogleContactsSync_installer    "
+  ui_print "   microG_Gsync_installer    "
   ui_print "************************************************************"
-  ui_print "༼ つ ◕_◕ ༽つ我在 @深夜听表/Github: taoaoooo/qq群: 273145623"
-  ui_print "༼ つ ◕_◕ ༽つFollow @深夜听表/Github: taoaoooo/QQ group: 273145623"
+  ui_print "༼ つ ◕_◕ ༽つ我在 @深夜听表/Github: ozingi/qq群: 273145623"
   ui_print " "
   unity_main # Don't change this line
 }

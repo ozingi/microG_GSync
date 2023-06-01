@@ -73,8 +73,8 @@ IFS=$OIFS
 		fi
 	
 
-#ui_print "- Follow github：taoaoooo/qq群：273145623"
-#ui_print "  Follow Github: taoaoooo/QQ group: 273145623"
+#ui_print "- Follow github：ozingi/qq群：273145623"
+#ui_print "  Follow Github: ozingi/QQ group: 273145623"
 
 mkdir -p $TMPDIR/system
 
@@ -94,6 +94,9 @@ if $microG; then
 		rm -rf /system/product/app/GoogleServicesFramework
 		rm -rf /system/system_ext/priv-app/GoogleServicesFramework || echo ">>>"
 		rm -rf /system/system_ext/app/GoogleServicesFramework
+		rm -rf /my_carrier/non_overlay/priv-app/GoogleServicesFramework # coloros 12
+		rm -rf /my_heytap/non_overlay/priv-app/GoogleServicesFramework # coloros 13
+		rm -rf /my_bigball/non_overlay/priv-app/GoogleServicesFramework # coloros 13
 		ui_print "-  Uninstall the gms..."
 		pm uninstall --user 0 com.google.android.gms
 		rm -rf /system/priv-app/PrebuiltGmsCore
@@ -102,7 +105,13 @@ if $microG; then
 		rm -rf /system/product/app/PrebuiltGmsCore
 		rm -rf /system/system_ext/priv-app/PrebuiltGmsCore
 		rm -rf /system/system_ext/app/PrebuiltGmsCore
-		rm -rf /my_carrier/priv-app/GmsCore # coloros12文件目录
+		rm -rf /system/product/priv-app/GmsCore # miui 14&motorola
+		rm -rf /my_carrier/priv-app/GmsCore # coloros 12
+		rm -rf /my_bigball/priv-app/GmsCore # coloros 13
+		rm -rf /my_heytap/priv-app/GmsCore # coloros 13
+#		rm -rf /my_carrier/priv-app/GooglePlayServicesUpdater # coloros 12
+#		rm -rf /my_heytap/priv-app/GooglePlayServicesUpdater # coloros 13
+#		rm -rf /my_bigball/priv-app/GooglePlayServicesUpdater # coloros 13
 		rm -rf /data/user/0/com.google.android.gms
 		ui_print "-  Uninstall the playStore..."
 		pm uninstall -k --user 0 com.google.android.vending

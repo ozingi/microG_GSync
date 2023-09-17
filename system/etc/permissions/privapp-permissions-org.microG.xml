@@ -14,7 +14,10 @@
 		<permission name="android.permission.NETWORK_SCAN"/>
 		<permission name="android.permission.UPDATE_DEVICE_STATS"/>
 		<permission name="android.permission.WATCH_APPOPS"/>
-    </privapp-permissions>
+		<!-- v0.2.29 New permission -->
+		<permission name="android.permission.RECEIVE_SMS"/>
+		
+	</privapp-permissions>
     <privapp-permissions package="com.google.android.gsf">
         <permission name="android.permission.FAKE_PACKAGE_SIGNATURE"/>
     </privapp-permissions>
